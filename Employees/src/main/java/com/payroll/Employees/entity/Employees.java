@@ -17,5 +17,5 @@ public class Employees {
     private String email;
     private LocalDate dob;
     private String role;
-    private Long mobileNumber;
+    private String mobileNumber;
 }

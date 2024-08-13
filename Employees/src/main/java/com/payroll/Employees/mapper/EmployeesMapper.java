@@ -12,8 +12,18 @@ public class EmployeesMapper {
         employees.setEmail(employeesDto.getEmail());
         employees.setMobileNumber(employeesDto.getMobileNumber());
         employees.setRole(employeesDto.getRole());
-        System.out.println(employees.getLastName());
         return employees;
     }
+
+    public static EmployeesDto mapToEmployeesDto(Employees employees,EmployeesDto employeesDto){
+        employeesDto.setFirstName(employees.getFirstName());
+        employeesDto.setLastName(employees.getLastName());
+        employeesDto.setDob(employees.getDob());
+        employeesDto.setEmail(employees.getEmail());
+        employeesDto.setMobileNumber(employees.getMobileNumber());
+        employeesDto.setRole(employees.getRole());
+        return employeesDto;
+    }
+
 
 }
