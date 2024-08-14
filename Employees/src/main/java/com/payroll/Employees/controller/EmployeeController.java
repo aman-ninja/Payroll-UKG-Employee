@@ -24,7 +24,6 @@ public class EmployeeController {
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createEmployee(@RequestBody EmployeesDto employeesDto) {
-        System.out.println(employeesDto.getFirstName());
         iEmployeesService.createEmployee(employeesDto);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(new ResponseDto("Successfully Created", HttpStatus.CREATED));
