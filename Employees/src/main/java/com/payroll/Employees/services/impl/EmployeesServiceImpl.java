@@ -25,8 +25,8 @@ public class EmployeesServiceImpl implements IEmployeesService {
             throw new EmployeeAlreadyExistException("Customer already exists for given mobile number " + mobileNumber);
         }
         Employees employees = EmployeesMapper.mapToEmployee(employeeDto, new Employees());
+        System.out.println("checck kro " + employees.getEmployeeId());
         employeeRepository.save(employees);
-
     }
     @Override
     public EmployeesDto fetchDetails(String mobileNumber) {

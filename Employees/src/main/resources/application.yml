@@ -1,5 +1,5 @@
 build:
-  version: "1.0.0"
+  version: "1.0.4"
 server:
   port: 8080
 spring:
@@ -43,4 +43,4 @@ info:
   app:
     name: "Applications MS"
     description: "Applications MS for IJP"
-    version : "1.0.0"
+    version : "1.0.4"
