@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri : "https://github.com/aman-ninja/Payroll-UKG-Employee.git"
+          uri : "https://github.com/irishabhmaloo/ms-config.git"
           timeout: 10
           default-label: main
           force-pull: true
