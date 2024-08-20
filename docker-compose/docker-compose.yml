@@ -39,7 +39,7 @@ services:
       - payroll
 
   employee:
-    image: amankhan401/employee:1.0.4
+    image: amankhan401/employee:1.0.5
     container_name: employee
     ports:
       - 8080:8080

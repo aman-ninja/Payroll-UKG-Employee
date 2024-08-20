@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data @AllArgsConstructor @NoArgsConstructor
 public class SalaryDto {
 
-    private long employeeId;
+    private Long employeeId;
     private String dateFrom;
     private String dateTo;
     private long basicAmt;

@@ -1,5 +1,6 @@
 package com.payroll.Employees.mapper;
 
+import com.payroll.Employees.dto.EmployeeLeaveDetailsDto;
 import com.payroll.Employees.dto.EmployeeSalaryDetailsDto;
 import com.payroll.Employees.dto.EmployeesDto;
 import com.payroll.Employees.entity.Employees;
@@ -39,4 +40,14 @@ public class EmployeesMapper {
         return employeeSalaryDetailsDto;
     }
 
+    public static EmployeeLeaveDetailsDto mapToEmployeeLeaveDetailsDto(Employees employees, EmployeeLeaveDetailsDto employeeLeaveDetailsDto) {
+        employeeLeaveDetailsDto.setEmployeeId(employees.getEmployeeId());
+        employeeLeaveDetailsDto.setFirstName(employees.getFirstName());
+        employeeLeaveDetailsDto.setLastName(employees.getLastName());
+        employeeLeaveDetailsDto.setDob(employees.getDob());
+        employeeLeaveDetailsDto.setEmail(employees.getEmail());
+        employeeLeaveDetailsDto.setMobileNumber(employees.getMobileNumber());
+        employeeLeaveDetailsDto.setRole(employees.getRole());
+        return employeeLeaveDetailsDto;
+    }
 }

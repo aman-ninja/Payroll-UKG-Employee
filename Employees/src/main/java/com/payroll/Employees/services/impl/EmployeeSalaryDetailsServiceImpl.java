@@ -29,11 +29,17 @@ public class EmployeeSalaryDetailsServiceImpl implements IEmployeeSalaryDetailsS
         Employees employees = employeeRepository.findByMobileNumber(mobileNumber).orElseThrow(
                 () -> new ResourceNotFoundException("Employee","Mobile Number",mobileNumber)
         );
+        System.out.println("check kr" + employees.getEmployeeId());
         EmployeeSalaryDetailsDto employeeSalaryDetailsDto = EmployeesMapper.mapToEmployeeSalaryDetailsDto(employees,new EmployeeSalaryDetailsDto());
-        ResponseEntity<List<SalaryDto>> salaryDtoResponseEntity = salaryFeignClient.fetchSalaryDetails(employees.getEmployeeId());
+
+//        ResponseEntity<List<PayrollDto>> payrollDtoResponseEntity = payrollFeignClient.fetchPayrollDetails(1l);
+//        employeeSalaryDetailsDto.setPayrollDtoList(payrollDtoResponseEntity.getBody());
+//        System.out.println("check kro wapis" + employeeSalaryDetailsDto.getPayrollDtoList());
+
+        ResponseEntity<List<SalaryDto>> salaryDtoResponseEntity = salaryFeignClient.fetchAllSalaryDetails(1l);
         employeeSalaryDetailsDto.setSalaryDtoList(salaryDtoResponseEntity.getBody());
-        ResponseEntity<List<PayrollDto>> payrollDtoResponseEntity = payrollFeignClient.fetchPayrollDetails(mobileNumber);
-        employeeSalaryDetailsDto.setPayrollDtoList(payrollDtoResponseEntity.getBody());
+        System.out.println("check kro dubara" + employeeSalaryDetailsDto.getSalaryDtoList());
         return employeeSalaryDetailsDto;
     }
+
 }

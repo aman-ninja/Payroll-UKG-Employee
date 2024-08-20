@@ -110,7 +110,7 @@
 				<version>3.4.1</version>
 				<configuration>
 					<to>
-						<image>amankhan401/${project.artifactId}:1.0.4</image>
+						<image>amankhan401/${project.artifactId}:1.0.5</image>
 					</to>
 				</configuration>
 			</plugin>

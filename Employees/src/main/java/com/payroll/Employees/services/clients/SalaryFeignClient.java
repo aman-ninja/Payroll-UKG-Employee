@@ -12,5 +12,5 @@ import java.util.List;
 @FeignClient("salary")
 public interface SalaryFeignClient {
     @GetMapping("/api/v1/fetch-all-salary")
-    ResponseEntity<List<SalaryDto>> fetchSalaryDetails(@RequestParam Long employeeId);
+    ResponseEntity<List<SalaryDto>> fetchAllSalaryDetails(@RequestParam Long empId);
 }
